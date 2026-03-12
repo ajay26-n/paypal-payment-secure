@@ -1,0 +1,117 @@
+/* Premium FinTech UI - Complete Master App.css */
+
+:root {
+  --primary-blue: #0070e0; 
+  --dark-navy: #001435;    
+  --bg-light: #ffffff;
+  --bg-offwhite: #f8f9fa;
+  --text-gray: #4b545f;
+  --border-light: #e1e8f0;
+}
+
+/* 1. Reset and Full-Width Override (Vite Fix) */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--dark-navy);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; }
+
+/* 2. Structural Layout Helpers */
+.full-width { 
+  width: 100vw; 
+}
+.content-container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 2rem; 
+}
+
+/* 3. Navbar */
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1.2rem 5%; 
+  background: var(--bg-light); 
+  border-bottom: 1px solid var(--border-light); 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand a { font-size: 2rem; font-weight: 900; color: #001c64; font-style: italic; letter-spacing: -1px; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links span { font-size: 1rem; font-weight: 600; cursor: pointer; color: var(--dark-navy); transition: color 0.2s; }
+.nav-links span:hover { color: var(--primary-blue); }
+.nav-actions { display: flex; gap: 1rem; align-items: center; }
+
+/* 4. Buttons */
+.btn-outline { padding: 0.6rem 1.8rem; border: 1.5px solid var(--dark-navy); color: var(--dark-navy); border-radius: 50px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; }
+.btn-outline:hover { background: var(--bg-offwhite); }
+
+.btn-solid { padding: 0.6rem 1.8rem; background: var(--dark-navy); color: white; border: none; border-radius: 50px; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; cursor: pointer; }
+.btn-solid:hover { background: var(--primary-blue); }
+
+.btn-large { padding: 1.2rem 3rem; background: var(--dark-navy); color: white; border-radius: 50px; font-size: 1.1rem; font-weight: 700; display: inline-block; margin-top: 1.5rem; transition: background 0.2s; }
+.btn-large:hover { background: var(--primary-blue); }
+
+.btn-solid-full { width: 100%; padding: 1rem; background: var(--primary-blue); color: white; border: none; border-radius: 500px; font-size: 1.1rem; font-weight: 700; cursor: pointer; margin-top: 1.5rem; transition: background 0.2s; }
+.btn-solid-full:hover { background: #005bb5; }
+
+/* 5. Hero Section & Typography */
+.hero-section { text-align: center; padding-top: 5rem; background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%); display: flex; flex-direction: column; align-items: center; }
+.hero-section h3 { color: var(--text-gray); font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.hero-section h1 { font-size: 5.5rem; font-weight: 800; color: var(--dark-navy); line-height: 1.05; letter-spacing: -2.5px; margin-bottom: 1.5rem; max-width: 900px; margin-left: auto; margin-right: auto;}
+
+/* Phone Mockup */
+.mockup-container { margin-top: 5rem; width: 100%; display: flex; justify-content: center; }
+.phone-mockup { position: relative; width: 320px; height: 650px; border: 14px solid #1a1c23; border-radius: 50px; background: var(--bg-offwhite); box-shadow: 0 30px 60px rgba(0, 20, 53, 0.15); display: flex; align-items: center; justify-content: center; color: #888; font-weight: 700; overflow: hidden; }
+.phone-mockup::before { content: ''; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 90px; height: 25px; background: #1a1c23; border-radius: 20px; }
+
+/* 6. Features Section */
+.features-section { padding: 6rem 0; background-color: var(--bg-light); text-align: center; }
+.features-section h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 4rem; letter-spacing: -1px; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left;}
+.feature-card { padding: 2.5rem; background: var(--bg-offwhite); border-radius: 24px; transition: transform 0.2s; border: 1px solid transparent; }
+.feature-card:hover { transform: translateY(-5px); border-color: var(--border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+.feature-card h4 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--dark-navy); }
+.feature-card p { font-size: 1.05rem; line-height: 1.6; color: var(--text-gray); }
+
+/* 7. Business Section */
+.business-section { padding: 8rem 0; background-color: var(--dark-navy); color: white; text-align: center; }
+.business-section h2 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -1px; color: white; }
+.business-section p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6; color: #aab5c6; }
+.business-btn { background: white; color: var(--dark-navy); padding: 1.2rem 3rem; border-radius: 50px;}
+.business-btn:hover { background: var(--border-light); color: var(--dark-navy);}
+
+/* 8. Footer */
+.footer { padding: 3rem 0; background-color: var(--bg-light); border-top: 1px solid var(--border-light); }
+.footer .content-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer p { color: var(--text-gray); font-size: 0.95rem; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links span { color: var(--dark-navy); font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+.footer-links span:hover { color: var(--primary-blue); text-decoration: underline; }
+
+/* 9. Auth Forms (Login / Register) */
+.auth-container { max-width: 440px; margin: 6rem auto; padding: 3rem; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid var(--border-light); }
+.auth-container h2 { margin-bottom: 2rem; color: var(--dark-navy); font-size: 2.2rem; font-weight: 800; text-align: center; letter-spacing: -1px; }
+.auth-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.auth-form input { padding: 1.1rem 1.2rem; border: 1px solid var(--border-light); border-radius: 12px; font-size: 1rem; color: var(--dark-navy); transition: all 0.2s; background: var(--bg-offwhite); }
+.auth-form input:focus { outline: none; border-color: var(--primary-blue); background: white; box-shadow: 0 0 0 4px rgba(0, 112, 224, 0.1); }
+.auth-message { margin-top: 1.5rem; font-weight: 600; text-align: center; padding: 1rem; border-radius: 12px; }
+.auth-message[style*="Success"] { color: #0d6efd; background: #cfe2ff; }
+.auth-message[style*="Error"] { color: #dc3545; background: #f8d7da; }

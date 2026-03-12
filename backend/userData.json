@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1773338389285",
+    "username": "sanjay",
+    "email": "sanjay@gmail.com",
+    "mobileNumber": "7832832948",
+    "password": "sanjay",
+    "createdAt": "2026-03-12T17:59:49.285Z"
+  },
+  {
+    "id": "1773339037836",
+    "username": "ajay",
+    "email": "ajay@gmail.com",
+    "mobileNumber": "3920478329",
+    "password": "ajay",
+    "createdAt": "2026-03-12T18:10:37.836Z"
+  }
+]
