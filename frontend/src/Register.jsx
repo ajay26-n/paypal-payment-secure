@@ -21,7 +21,7 @@ function Register() {
     e.preventDefault(); // Prevent page reload
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('https://paypal-payment-secure.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -83,5 +83,6 @@ function Register() {
     </div>
   );
 }
+
 
 export default Register;
