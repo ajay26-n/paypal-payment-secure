@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'http://localhost:5173', 
+    origin: 'https://paypal-payment-secure-1.onrender.com', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true 
 };
@@ -42,3 +42,4 @@ const startServer = async () => {
 };
 
 startServer();
+
