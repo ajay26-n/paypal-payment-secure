@@ -21,7 +21,11 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 
+app.get("/",(req, res)=>{
+    res.json({success : "true", message : "Server is On"});
+})
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+
 });
